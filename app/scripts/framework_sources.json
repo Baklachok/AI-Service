@@ -91,7 +91,7 @@
     "name": "Hug",
     "lang": "Python",
     "github": "https://github.com/hugapi/hug",
-    "website": "https://www.hug.rest/",
+    "website": "https://hugapi.github.io/hug/",
     "habr": "https://habr.com/ru/search/?q=hug+python&target_type=posts",
     "stackoverflow": "https://stackoverflow.com/questions/tagged/hug"
   },
@@ -115,7 +115,7 @@
     "name": "Responder",
     "lang": "Python",
     "github": "https://github.com/kennethreitz/responder",
-    "website": "https://python-responder.org/",
+    "website": "https://kennethreitz.org/software/responder/",
     "habr": "https://habr.com/ru/search/?q=responder+python&target_type=posts",
     "stackoverflow": "https://stackoverflow.com/questions/tagged/responder"
   },
@@ -139,7 +139,7 @@
     "name": "Vibora",
     "lang": "Python",
     "github": "https://github.com/vibora-io/vibora",
-    "website": "https://vibora.io/",
+    "website": "https://docs.vibora.io/",
     "habr": "https://habr.com/ru/search/?q=vibora&target_type=posts",
     "stackoverflow": "https://stackoverflow.com/questions/tagged/vibora"
   },
@@ -147,7 +147,7 @@
     "name": "Growler",
     "lang": "Python",
     "github": "https://github.com/pyGrowler/Growler",
-    "website": "https://pygrowler.readthedocs.io/",
+    "website": "https://pypi.org/project/growler/",
     "habr": "https://habr.com/ru/search/?q=growler+python&target_type=posts",
     "stackoverflow": "https://stackoverflow.com/questions/tagged/growler"
   },
