@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Django",
+    "lang": "Python",
+    "github": "https://github.com/django/django",
+    "website": "https://www.djangoproject.com/",
+    "habr": "https://habr.com/ru/search/?q=django&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/django"
+  },
+  {
+    "name": "FastAPI",
+    "lang": "Python",
+    "github": "https://github.com/tiangolo/fastapi",
+    "website": "https://fastapi.tiangolo.com/",
+    "habr": "https://habr.com/ru/search/?q=fastapi&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/fastapi"
+  },
+  {
+    "name": "Flask",
+    "lang": "Python",
+    "github": "https://github.com/pallets/flask",
+    "website": "https://flask.palletsprojects.com/",
+    "habr": "https://habr.com/ru/search/?q=flask&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/flask"
+  },
+  {
+    "name": "Tornado",
+    "lang": "Python",
+    "github": "https://github.com/tornadoweb/tornado",
+    "website": "https://www.tornadoweb.org/en/stable/",
+    "habr": "https://habr.com/ru/search/?q=tornado+python&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/tornado"
+  },
+  {
+    "name": "Pyramid",
+    "lang": "Python",
+    "github": "https://github.com/Pylons/pyramid",
+    "website": "https://trypyramid.com/",
+    "habr": "https://habr.com/ru/search/?q=pyramid+python&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/pyramid"
+  },
+  {
+    "name": "Sanic",
+    "lang": "Python",
+    "github": "https://github.com/sanic-org/sanic",
+    "website": "https://sanic.dev/",
+    "habr": "https://habr.com/ru/search/?q=sanic&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/sanic"
+  },
+  {
+    "name": "Starlette",
+    "lang": "Python",
+    "github": "https://github.com/encode/starlette",
+    "website": "https://www.starlette.io/",
+    "habr": "https://habr.com/ru/search/?q=starlette&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/starlette"
+  },
+  {
+    "name": "Falcon",
+    "lang": "Python",
+    "github": "https://github.com/falconry/falcon",
+    "website": "https://falconframework.org/",
+    "habr": "https://habr.com/ru/search/?q=falcon+python&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/falcon"
+  },
+  {
+    "name": "Bottle",
+    "lang": "Python",
+    "github": "https://github.com/bottlepy/bottle",
+    "website": "https://bottlepy.org/docs/dev/",
+    "habr": "https://habr.com/ru/search/?q=bottle+python&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/bottle"
+  },
+  {
+    "name": "aiohttp",
+    "lang": "Python",
+    "github": "https://github.com/aio-libs/aiohttp",
+    "website": "https://docs.aiohttp.org/en/stable/",
+    "habr": "https://habr.com/ru/search/?q=aiohttp&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/aiohttp"
+  },
+  {
+    "name": "CherryPy",
+    "lang": "Python",
+    "github": "https://github.com/cherrypy/cherrypy",
+    "website": "https://cherrypy.dev/",
+    "habr": "https://habr.com/ru/search/?q=cherrypy&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/cherrypy"
+  },
+  {
+    "name": "Hug",
+    "lang": "Python",
+    "github": "https://github.com/hugapi/hug",
+    "website": "https://www.hug.rest/",
+    "habr": "https://habr.com/ru/search/?q=hug+python&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/hug"
+  },
+  {
+    "name": "TurboGears",
+    "lang": "Python",
+    "github": "https://github.com/TurboGears/tg2",
+    "website": "https://turbogears.org/",
+    "habr": "https://habr.com/ru/search/?q=turbogears&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/turbogears"
+  },
+  {
+    "name": "Masonite",
+    "lang": "Python",
+    "github": "https://github.com/MasoniteFramework/masonite",
+    "website": "https://docs.masoniteproject.com/",
+    "habr": "https://habr.com/ru/search/?q=masonite&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/masonite"
+  },
+  {
+    "name": "Responder",
+    "lang": "Python",
+    "github": "https://github.com/kennethreitz/responder",
+    "website": "https://python-responder.org/",
+    "habr": "https://habr.com/ru/search/?q=responder+python&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/responder"
+  },
+  {
+    "name": "Quart",
+    "lang": "Python",
+    "github": "https://github.com/pallets/quart",
+    "website": "https://quart.palletsprojects.com/",
+    "habr": "https://habr.com/ru/search/?q=quart+python&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/quart"
+  },
+  {
+    "name": "Web2py",
+    "lang": "Python",
+    "github": "https://github.com/web2py/web2py",
+    "website": "http://www.web2py.com/",
+    "habr": "https://habr.com/ru/search/?q=web2py&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/web2py"
+  },
+  {
+    "name": "Vibora",
+    "lang": "Python",
+    "github": "https://github.com/vibora-io/vibora",
+    "website": "https://vibora.io/",
+    "habr": "https://habr.com/ru/search/?q=vibora&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/vibora"
+  },
+  {
+    "name": "Growler",
+    "lang": "Python",
+    "github": "https://github.com/pyGrowler/Growler",
+    "website": "https://pygrowler.readthedocs.io/",
+    "habr": "https://habr.com/ru/search/?q=growler+python&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/growler"
+  },
+  {
+    "name": "Morepath",
+    "lang": "Python",
+    "github": "https://github.com/morepath/morepath",
+    "website": "https://morepath.readthedocs.io/",
+    "habr": "https://habr.com/ru/search/?q=morepath&target_type=posts",
+    "stackoverflow": "https://stackoverflow.com/questions/tagged/morepath"
+  }
+]

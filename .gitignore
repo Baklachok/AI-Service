@@ -174,4 +174,4 @@ test.db
 
 # Real data for database
 src/fixtures/
-./data
+app/data
