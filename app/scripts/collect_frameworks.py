@@ -1,27 +1,18 @@
 import json
+import os
 import uuid
 import time
 import logging
 import re
-from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import requests
 from bs4 import BeautifulSoup
 
-
-# === Настройки ===
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_PATH = BASE_DIR / "data" / "frameworks_raw.jsonl"
-SOURCES_PATH = BASE_DIR / "scripts" / "framework_sources.json"
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-)
+from app.settings import DATA_PATH, SOURCES_PATH
 
 HEADERS = {
-    'User-Agent': "Mozilla/5.0 (compatible; FrameworkCollector/1.0; +https://github.com/Baklachok/AI-Service)"
+    "User-Agent": os.getenv("USER_AGENT")
 }
 
 

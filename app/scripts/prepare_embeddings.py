@@ -1,26 +1,12 @@
 import json
 import logging
 import re
-from pathlib import Path
 from typing import List
-import os
 
 from chromadb import PersistentClient
 from sentence_transformers import SentenceTransformer
-from dotenv import load_dotenv
 
-
-# === Настройки ===
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_PATH = BASE_DIR / "data" / "frameworks_raw.jsonl"
-CHROMA_DB_DIR = BASE_DIR / "data" / "chroma_db"
-
-load_dotenv(BASE_DIR / ".env")
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-)
+from settings import CHROMA_DB_DIR, DATA_PATH
 
 model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
