@@ -14,3 +14,9 @@ typing_extensions==4.15.0
 uvicorn==0.38.0
 beautifulsoup4
 requests
+chromadb
+openai
+python-dotenv
+chromadb
+sentence-transformers
+torch

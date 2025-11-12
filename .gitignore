@@ -175,3 +175,5 @@ test.db
 # Real data for database
 src/fixtures/
 app/data
+
+.env

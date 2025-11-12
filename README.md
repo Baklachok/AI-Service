@@ -26,3 +26,11 @@ RAG (Retrieval-Augmented Generation) сервис для для подбора �
      ```bash
      docker compose exec web python scripts/collect_frameworks.py
      ```
+
+## Запуск препроцессинг + эмбеддинг
+
+1. **Выполните следующие действия в терминале в папке проекта:**
+   - Ручной запуск парсера:
+     ```bash
+     docker compose exec web python scripts/prepare_embeddings.py
+     ```
