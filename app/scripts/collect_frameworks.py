@@ -5,11 +5,14 @@ import time
 import logging
 import re
 from typing import Any, Dict, List, Optional
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
 
-from app.settings import DATA_PATH, SOURCES_PATH
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "data" / "frameworks_raw.jsonl"
+SOURCES_PATH = BASE_DIR / "scripts" / "framework_sources.json"
 
 HEADERS = {
     "User-Agent": os.getenv("USER_AGENT")

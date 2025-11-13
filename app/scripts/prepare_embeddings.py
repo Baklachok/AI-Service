@@ -2,11 +2,13 @@ import json
 import logging
 import re
 from typing import List
-
+from pathlib import Path
 from chromadb import PersistentClient
 from sentence_transformers import SentenceTransformer
 
-from settings import CHROMA_DB_DIR, DATA_PATH
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "data" / "frameworks_raw.jsonl"
+CHROMA_DB_DIR = BASE_DIR / "data" / "chroma_db"
 
 model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
@@ -29,6 +31,7 @@ def embed_text(texts: List[str]) -> List[List[float]]:
     """Создание эмбеддингов через SentenceTransformer"""
     logging.info(f"Создаём локальные эмбеддинги для {len(texts)} чанков...")
     return model.encode(texts, show_progress_bar=True).tolist()
+
 
 def safe_str(value):
     """Преобразует None → '' и всё остальное → str"""
