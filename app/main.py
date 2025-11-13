@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-
 from search.router import router
+
 
 app = FastAPI()
 

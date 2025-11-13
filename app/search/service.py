@@ -1,11 +1,9 @@
-from search.llm import query_openrouter
-from pathlib import Path
 from chromadb import PersistentClient
+from search.llm import query_openrouter
 from sentence_transformers import SentenceTransformer
-
 from settings import CHROMA_DB_DIR, COLLECTION_NAME, EMBEDDING_MODEL
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+
 client_chroma = PersistentClient(path=CHROMA_DB_DIR)
 collection = client_chroma.get_or_create_collection(COLLECTION_NAME)
 embedding_model = SentenceTransformer(EMBEDDING_MODEL)
@@ -18,8 +16,7 @@ def search_relevant_context(query: str, n_results: int = 5):
     metadatas = results.get("metadatas", [[]])[0]
 
     combined = [
-        f"{meta.get('framework', '')} ({meta.get('language', '')}): {doc}"
-        for doc, meta in zip(documents, metadatas)
+        f"{meta.get('framework', '')} ({meta.get('language', '')}): {doc}" for doc, meta in zip(documents, metadatas)
     ]
     return combined
 

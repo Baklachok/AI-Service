@@ -1,0 +1,18 @@
+line-length = 120
+include = ["*.py"]
+exclude = ["migrations"]
+
+[lint]
+extend-select = [
+    "E", # pycodestyle
+    "I", # isort
+    "B", # flake8-bugbear
+    "G", # flake8-logging-format
+    "SIM", # flake8-simplify
+    "UP", # pyupgrade
+]
+
+[lint.isort]
+split-on-trailing-comma = true
+combine-as-imports = true
+lines-after-imports = 2

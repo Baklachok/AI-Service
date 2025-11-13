@@ -4,10 +4,15 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
+DATA_PATH = BASE_DIR / "data" / "frameworks_raw.jsonl"
+SOURCES_PATH = BASE_DIR / "scripts" / "framework_sources.json"
+CHROMA_DB_DIR = BASE_DIR / "data" / "chroma_db"
+HEADERS = {"User-Agent": os.getenv("USER_AGENT")}
 
 SYSTEM_PROMPT = """Ты — умный помощник, который помогает выбрать подходящий Python-фреймворк по описанию задачи.
 Используй найденные сниппеты и предложи лучший вариант, объясни почему."""

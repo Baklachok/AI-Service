@@ -1,22 +1,13 @@
 import json
-import os
-import uuid
-import time
 import logging
 import re
-from typing import Any, Dict, List, Optional
-from pathlib import Path
+import time
+import uuid
+from typing import Any, Optional
 
 import requests
 from bs4 import BeautifulSoup
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_PATH = BASE_DIR / "data" / "frameworks_raw.jsonl"
-SOURCES_PATH = BASE_DIR / "scripts" / "framework_sources.json"
-
-HEADERS = {
-    "User-Agent": os.getenv("USER_AGENT")
-}
+from settings import DATA_PATH, HEADERS, SOURCES_PATH
 
 
 def fetch_html(url: str) -> Optional[str]:
@@ -26,7 +17,7 @@ def fetch_html(url: str) -> Optional[str]:
         response.raise_for_status()
         return response.text
     except requests.exceptions.RequestException as e:
-        logging.warning(f"Не удалось загрузить {url}: {e}")
+        logging.warning("Не удалось загрузить %s: %s", url, e)
 
 
 def extract_text_from_html(html: str, max_len: int = 5000) -> str:
@@ -95,10 +86,10 @@ def parse_stackoverflow(url: str, max_questions: int = 3) -> str:
     return " ".join(q_texts)
 
 
-def collect_data(source: Dict[str, Any]) -> Dict[str, Any]:
+def collect_data(source: dict[str, Any]) -> dict[str, Any]:
     """Собирает данные по одному фреймворку"""
     name = source["name"]
-    logging.info(f"Парсим {name}...")
+    logging.info("Парсим %s...", name)
 
     text_parts = []
 
@@ -136,8 +127,8 @@ def collect_data(source: Dict[str, Any]) -> Dict[str, Any]:
 def main():
     DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(SOURCES_PATH, "r", encoding="utf-8") as f:
-        sources: List[Dict[str, Any]] = json.load(f)
+    with open(SOURCES_PATH, encoding="utf-8") as f:
+        sources: list[dict[str, Any]] = json.load(f)
 
     with open(DATA_PATH, "w", encoding="utf-8") as out:
         for s in sources:
@@ -145,7 +136,7 @@ def main():
             out.write(json.dumps(record, ensure_ascii=False) + "\n")
             time.sleep(1)  # немного, чтобы не банили за частые запросы
 
-    logging.info(f"Данные сохранены в {DATA_PATH}")
+    logging.info("Данные сохранены в %s", DATA_PATH)
 
 
 if __name__ == "__main__":

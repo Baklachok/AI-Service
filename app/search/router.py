@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
-
-from search.models import QueryResponse, QueryRequest
+from search.models import QueryRequest, QueryResponse
 from search.service import get_framework_recommendation
+
 
 router = APIRouter()
 
