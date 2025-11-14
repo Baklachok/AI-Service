@@ -1,6 +1,7 @@
 import json
 import logging
 import re
+from typing import Any
 
 from chromadb import PersistentClient
 from sentence_transformers import SentenceTransformer
@@ -27,15 +28,16 @@ def chunk_text(text: str, max_words: int = 500) -> list[str]:
 def embed_text(texts: list[str]) -> list[list[float]]:
     """Создание эмбеддингов через SentenceTransformer"""
     logging.info("Создаём локальные эмбеддинги для %s чанков...", len(texts))
-    return model.encode(texts, show_progress_bar=True).tolist()
+    embeddings = model.encode(texts, show_progress_bar=True)
+    return [list(e) for e in embeddings]
 
 
-def safe_str(value):
+def safe_str(value: Any) -> str:
     """Преобразует None → '' и всё остальное → str"""
     return str(value) if value is not None else ""
 
 
-def main():
+def main() -> None:
     if not DATA_PATH.exists():
         logging.error("%s не найден", DATA_PATH)
         return

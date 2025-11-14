@@ -3,14 +3,14 @@ import logging
 import re
 import time
 import uuid
-from typing import Any, Optional
+from typing import Any
 
 import requests
 from bs4 import BeautifulSoup
 from settings import DATA_PATH, HEADERS, SOURCES_PATH
 
 
-def fetch_html(url: str) -> Optional[str]:
+def fetch_html(url: str) -> str | None:
     """Получает html, возвращает текст страницы"""
     try:
         response = requests.get(url, headers=HEADERS, timeout=10)
@@ -18,6 +18,7 @@ def fetch_html(url: str) -> Optional[str]:
         return response.text
     except requests.exceptions.RequestException as e:
         logging.warning("Не удалось загрузить %s: %s", url, e)
+    return None
 
 
 def extract_text_from_html(html: str, max_len: int = 5000) -> str:
@@ -45,7 +46,7 @@ def parse_github(url: str) -> str:
 
     desc = soup.find("meta", {"property": "og:description"})
     if desc and desc.get("content"):
-        return desc["content"]
+        return str(desc["content"])
     return ""
 
 
@@ -124,7 +125,7 @@ def collect_data(source: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def main():
+def main() -> None:
     DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
 
     with open(SOURCES_PATH, encoding="utf-8") as f:

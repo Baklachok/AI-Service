@@ -12,5 +12,5 @@ def query_openrouter(prompt: str) -> str:
         temperature=0.3,
     )
     message = response.choices[0].message
-    text = message.content or message.reasoning or ""
+    text = message.content or ""
     return text

@@ -7,7 +7,7 @@ router = APIRouter()
 
 
 @router.post("/query", response_model=QueryResponse)
-async def query_task(request: QueryRequest):
+async def query_task(request: QueryRequest) -> QueryResponse:
     if not request.text.strip():
         raise HTTPException(status_code=400, detail="Text cannot be empty")
 
